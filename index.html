@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atara Hadad | Full-Stack Developer</title>
+  <meta name="description" content="Atara Hadad, full-stack developer. Backend architecture, end-to-end systems, and AI integrated into working products." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Roboto:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#top" class="logo">Atara Hadad</a>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#ai">AI projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#art">Art</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">◐</button>
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ================= INTRO: art collage + story, driven by scroll ================= -->
+    <section class="intro" id="intro">
+      <div class="stage">
+        <!-- Each piece: --x/--y position, --w width, --r rotation, --d parallax depth, --delay entry delay -->
+        <div class="collage" aria-hidden="true">
+          <div class="piece tape" style="--x:3%;--y:9%;--w:14vw;--r:-6deg;--d:1.3;--delay:.05s"><div class="piece-in"><img src="art/art-05.jpg" alt="" /></div></div>
+          <div class="piece" style="--x:79%;--y:7%;--w:15vw;--r:5deg;--d:1.4;--delay:.15s"><div class="piece-in"><img src="art/art-06.jpg" alt="" /></div></div>
+          <div class="piece tape" style="--x:36%;--y:5%;--w:19vw;--r:2deg;--d:.7;--delay:.25s"><div class="piece-in"><img src="art/art-08.jpg" alt="" /></div></div>
+          <div class="piece" style="--x:2%;--y:52%;--w:12vw;--r:4deg;--d:1.1;--delay:.35s"><div class="piece-in"><img src="art/art-01.jpg" alt="" /></div></div>
+          <div class="piece tape" style="--x:83%;--y:50%;--w:12vw;--r:-4deg;--d:1.2;--delay:.45s"><div class="piece-in"><img src="art/art-13.jpg" alt="" /></div></div>
+          <div class="piece" style="--x:18%;--y:31%;--w:10vw;--r:-3deg;--d:.9;--delay:.55s"><div class="piece-in"><img src="art/art-09.jpg" alt="" /></div></div>
+          <div class="piece" style="--x:67%;--y:31%;--w:11vw;--r:6deg;--d:.8;--delay:.65s"><div class="piece-in"><img src="art/art-03.jpg" alt="" /></div></div>
+          <div class="piece" style="--x:21%;--y:63%;--w:9vw;--r:-5deg;--d:1;--delay:.75s"><div class="piece-in"><img src="art/art-02.jpg" alt="" /></div></div>
+          <div class="piece tape" style="--x:65%;--y:63%;--w:9vw;--r:3deg;--d:1;--delay:.85s"><div class="piece-in"><img src="art/art-07.jpg" alt="" /></div></div>
+          <div class="piece" style="--x:45%;--y:70%;--w:7vw;--r:-2deg;--d:.6;--delay:.95s"><div class="piece-in"><img src="art/art-12.jpg" alt="" /></div></div>
+          <div class="piece" style="--x:60%;--y:4%;--w:8vw;--r:-7deg;--d:.9;--delay:1.05s"><div class="piece-in"><img src="art/art-04.jpg" alt="" /></div></div>
+          <div class="piece" style="--x:25%;--y:6%;--w:8vw;--r:5deg;--d:.8;--delay:1.15s"><div class="piece-in"><img src="art/art-10.jpg" alt="" /></div></div>
+          <div class="piece" style="--x:5%;--y:35%;--w:8vw;--r:7deg;--d:1.1;--delay:1.25s"><div class="piece-in"><img src="art/art-11.jpg" alt="" /></div></div>
+        </div>
+
+        <div class="beats">
+          <div class="beat beat-0">
+            <p class="hand">A few things I've drawn.</p>
+            <p class="scroll-hint">scroll <span>↓</span></p>
+          </div>
+          <div class="beat beat-1">
+            <p class="hand big">You're probably wondering how I ended up in code?</p>
+          </div>
+          <div class="beat beat-2">
+            <p class="hand big">Well, you just touched the very thing that brought me here.</p>
+          </div>
+          <div class="beat beat-3">
+            <h1>
+              Hi, I'm
+              <span class="name">Atara
+                <svg class="pencil-line" viewBox="0 0 300 24" preserveAspectRatio="none" aria-hidden="true">
+                  <path d="M4 16 C 60 6, 120 20, 180 11 S 270 8, 296 14" />
+                </svg>
+              </span>
+            </h1>
+            <p class="beat-lead">
+              A full-stack developer with a wild connection to creativity
+              and a real love for people.
+            </p>
+            <p class="beat-meta">Full-Stack Developer · AI &amp; Intelligent Systems · R&amp;D Specialist at Easy Cyber</p>
+            <div class="hero-buttons">
+              <a href="#work" class="btn btn-primary">See my work</a>
+              <a href="#contact" class="btn btn-outline">Get in touch</a>
+            </div>
+            <ul class="hero-links">
+              <li><a href="https://www.linkedin.com/in/atara24" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+              <li><a href="https://huggingface.co/ArtInSoul" target="_blank" rel="noopener">Hugging Face ↗</a></li>
+              <li><a href="#art">My art</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="section container">
+      <h2 class="section-title">About</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a full-stack developer with hands-on experience building AI-integrated systems
+            in a high-pressure cybersecurity startup, including designing and embedding
+            LLM-based agents into product workflows.
+          </p>
+          <p>
+            I'm comfortable owning features end to end, from architecture and design through
+            implementation and deployment, and I work directly with engineering, product,
+            and leadership.
+          </p>
+          <p>
+            Since January 2025 I've owned complete systems rather than isolated tickets.
+            I also designed a backend framework and drove its adoption until it became the
+            company standard.
+          </p>
+          <p>
+            Outside work, I independently train and fine-tune custom computer-vision models.
+          </p>
+        </div>
+        <aside class="facts">
+          <dl>
+            <dt>Current role</dt>
+            <dd>R&amp;D Specialist, Easy Cyber LTD<br /><span class="muted">Cybersecurity startup, small dev team</span></dd>
+            <dt>Experience</dt>
+            <dd>About 2 years<br /><span class="muted">January 2025 to present</span></dd>
+            <dt>Education</dt>
+            <dd>Software Engineering &amp; Computer Science Technician Diploma<br /><span class="muted">Navat Israel, Ministry of Education · 2022 to 2024</span></dd>
+            <dt>Languages</dt>
+            <dd>Hebrew (native), English (near-native)</dd>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ================= SELECTED WORK ================= -->
+    <section id="work" class="section container">
+      <h2 class="section-title hand-title">
+        <span class="circled">Selected work<svg class="pencil-circle" viewBox="0 0 300 100" preserveAspectRatio="none" aria-hidden="true">
+          <path pathLength="1" d="M48 20 C 115 2, 252 6, 286 40 C 306 68, 236 94, 148 95 C 58 96, 6 78, 13 50 C 18 28, 66 13, 122 9"/>
+          <path class="retrace" pathLength="1" d="M60 16 C 130 0, 260 12, 282 44 C 296 70, 226 90, 150 91 C 64 92, 14 74, 18 48 C 22 30, 70 16, 130 13"/>
+        </svg></span>
+      </h2>
+      <p class="section-intro">
+        These are internal systems, so here is just a glimpse. The full stories are better told in person.
+      </p>
+      <div class="projects-grid small">
+        <article class="project">
+          <button class="tile" aria-haspopup="dialog">
+            <span class="tile-art"><svg class="art-svg" viewBox="0 0 400 300" role="img" aria-label="Abstract sketch: nested network segments with nodes wired port to port"><circle class="gd spin" cx="200" cy="150" r="118"/> <line class="gd" x1="30" y1="150" x2="370" y2="150"/> <rect class="ln" x="70" y="70" width="190" height="150" rx="10"/> <rect class="ln dash" x="92" y="104" width="96" height="84" rx="8"/> <line class="ln" x1="133" y1="139" x2="153" y2="155"/> <circle class="ln" cx="125" cy="133" r="10"/><circle class="ln" cx="161" cy="162" r="10"/> <circle class="ln" cx="226" cy="108" r="10"/><circle class="ln" cx="312" cy="88" r="8"/> <line class="ln" x1="236" y1="106" x2="304" y2="90"/> <path class="ac" d="M171 164 C 220 175, 260 200, 306 190"/> <rect class="af" x="168" y="161" width="6" height="6"/><rect class="af" x="303" y="187" width="6" height="6"/> <circle class="ln" cx="320" cy="192" r="12"/> <text class="nt" x="262" y="250" transform="rotate(-4 262 250)">port → port</text></svg></span>
+            <span class="tile-meta">
+              <span class="tile-num">01</span><span class="tile-title">Network asset-map application</span>
+              <span class="tile-tag">An editable map of a network, built across all three tiers.</span>
+              <span class="tile-foot"><span class="badge">Sole author · all three tiers</span><span class="tile-open">Open ↗</span></span>
+            </span>
+          </button>
+          <div class="project-body" hidden>
+            <div class="case-head"><span class="case-num">01</span><h3>Network asset-map application</h3><span class="badge">Sole author · all three tiers</span></div>
+            <p class="case-summary">A visual tool for drawing and editing networks. I built it end to end: the database, the API and the interface.</p>
+            <p class="ask"><span>Ask me about</span> why the schema, not the code, keeps the map honest.</p>
+            <ul class="stack"><li>React</li><li>NestJS</li><li>PostgreSQL</li></ul>
+            <a class="talk" href="#contact">Let's talk about it →</a>
+          </div>
+        </article>
+        <article class="project">
+          <button class="tile" aria-haspopup="dialog">
+            <span class="tile-art"><svg class="art-svg" viewBox="0 0 400 300" role="img" aria-label="Abstract sketch: alerts moving along a timeline through a gate, with a retry loop"><line class="ln" x1="30" y1="170" x2="370" y2="170"/> <line class="gd" x1="70" y1="164" x2="70" y2="176"/><line class="gd" x1="110" y1="164" x2="110" y2="176"/> <line class="gd" x1="150" y1="164" x2="150" y2="176"/><line class="gd" x1="190" y1="164" x2="190" y2="176"/> <line class="gd" x1="290" y1="164" x2="290" y2="176"/><line class="gd" x1="330" y1="164" x2="330" y2="176"/> <circle class="dt" cx="70" cy="152" r="4"/><circle class="dt" cx="110" cy="152" r="4"/> <circle class="dt" cx="150" cy="152" r="4"/><circle class="dt" cx="150" cy="137" r="4"/><circle class="dt" cx="150" cy="122" r="4"/> <circle class="gd spin" cx="150" cy="137" r="28"/> <circle class="dt" cx="190" cy="152" r="4"/> <line class="ln" x1="250" y1="80" x2="250" y2="140"/><line class="ln" x1="250" y1="160" x2="250" y2="215"/> <path class="ln" d="M246 112 C 240 62, 196 62, 194 120"/><polyline class="ln" points="188,112 194,121 200,112"/> <circle class="af" cx="300" cy="152" r="5"/><circle class="ac" cx="300" cy="152" r="12"/> <circle class="dt" cx="340" cy="152" r="4"/> <polygon class="dt" points="223,190 235,190 229,180"/> <text class="nt" x="160" y="55">never lost</text> <text class="nt" x="270" y="240" transform="rotate(-3 270 240)">at least once</text></svg></span>
+            <span class="tile-meta">
+              <span class="tile-num">02</span><span class="tile-title">Alert-forwarding service</span>
+              <span class="tile-tag">Moves security alerts between systems without losing one.</span>
+              <span class="tile-foot"><span class="badge">Near-sole author</span><span class="tile-open">Open ↗</span></span>
+            </span>
+          </button>
+          <div class="project-body" hidden>
+            <div class="case-head"><span class="case-num">02</span><h3>Alert-forwarding service</h3><span class="badge">Near-sole author</span></div>
+            <p class="case-summary">A service that passes security alerts from one system to another, built so none get lost on the way.</p>
+            <p class="ask"><span>Ask me about</span> the one-second blind spot, and how I closed it.</p>
+            <ul class="stack"><li>NestJS</li><li>TypeScript</li><li>Elasticsearch</li></ul>
+            <a class="talk" href="#contact">Let's talk about it →</a>
+          </div>
+        </article>
+        <article class="project">
+          <button class="tile" aria-haspopup="dialog">
+            <span class="tile-art"><svg class="art-svg" viewBox="0 0 400 300" role="img" aria-label="Abstract sketch: one trunk rising from two tiers and branching into many services"><circle class="gd spin" cx="200" cy="150" r="122"/> <polygon class="ln" points="120,252 266,252 290,232 144,232"/> <polygon class="ln" points="120,222 266,222 290,202 144,202"/> <line class="gd" x1="205" y1="222" x2="205" y2="232"/> <path class="ac" d="M205 202 L 205 150"/> <path class="ln" d="M205 150 C 205 120, 130 120, 118 86"/> <path class="ln" d="M205 150 C 205 110, 172 92, 170 64"/> <path class="ln" d="M205 150 C 205 110, 240 92, 244 64"/> <path class="ln" d="M205 150 C 205 120, 292 118, 304 88"/> <rect class="ln" x="110" y="70" width="16" height="16"/><rect class="ln" x="162" y="48" width="16" height="16"/> <rect class="af" x="236" y="48" width="16" height="16"/><rect class="ln" x="296" y="72" width="16" height="16"/> <text class="nt" x="40" y="200" transform="rotate(-6 40 200)">one tree,</text> <text class="nt" x="40" y="222" transform="rotate(-6 40 222)">many services</text></svg></span>
+            <span class="tile-meta">
+              <span class="tile-num">03</span><span class="tile-title">Shared backend framework</span>
+              <span class="tile-tag">The backend base that new services are built on.</span>
+              <span class="tile-foot"><span class="badge">Design owner · co-implemented</span><span class="tile-open">Open ↗</span></span>
+            </span>
+          </button>
+          <div class="project-body" hidden>
+            <div class="case-head"><span class="case-num">03</span><h3>Shared backend framework</h3><span class="badge">Design owner · co-implemented</span></div>
+            <p class="case-summary">A shared foundation that new backend services start from. I designed it and drove it through to adoption as the standard.</p>
+            <p class="ask"><span>Ask me about</span> the tradeoff I chose on purpose, and when I would choose differently.</p>
+            <ul class="stack"><li>NestJS</li><li>Prisma</li><li>PostgreSQL</li></ul>
+            <a class="talk" href="#contact">Let's talk about it →</a>
+          </div>
+        </article>
+        <article class="project">
+          <button class="tile" aria-haspopup="dialog">
+            <span class="tile-art"><svg class="art-svg" viewBox="0 0 400 300" role="img" aria-label="Abstract sketch: a JSON definition becoming virtual machines behind a firewall"><circle class="gd spin" cx="250" cy="140" r="105"/> <text class="brace" x="38" y="168">{ }</text> <line class="gd" x1="125" y1="150" x2="168" y2="150"/><polyline class="ln" points="160,144 168,150 160,156"/> <line class="ac dash" x1="185" y1="78" x2="185" y2="205"/> <rect class="ln" x="205" y="85" width="40" height="30" rx="4"/><rect class="ln" x="260" y="85" width="40" height="30" rx="4"/> <rect class="ln" x="315" y="85" width="40" height="30" rx="4"/><rect class="ln" x="205" y="135" width="40" height="30" rx="4"/> <rect class="ln" x="260" y="135" width="40" height="30" rx="4"/><rect class="ln" x="315" y="135" width="40" height="30" rx="4"/> <path class="ln" d="M232 232 C 250 205, 290 205, 308 232"/><polyline class="ln" points="300,226 308,233 309,223"/> <path class="ln" d="M308 244 C 290 268, 250 268, 232 244"/><polyline class="ln" points="240,250 232,243 231,253"/> <text class="nt" x="190" y="244">WAN</text><text class="nt" x="316" y="244">LAN</text></svg></span>
+            <span class="tile-meta">
+              <span class="tile-num">04</span><span class="tile-title">Virtualized environment provisioning</span>
+              <span class="tile-tag">From a JSON file to a running virtual network.</span>
+              <span class="tile-foot"><span class="badge">Sole author of the automation</span><span class="tile-open">Open ↗</span></span>
+            </span>
+          </button>
+          <div class="project-body" hidden>
+            <div class="case-head"><span class="case-num">04</span><h3>Virtualized environment provisioning</h3><span class="badge">Sole author of the automation</span></div>
+            <p class="case-summary">Automation that turns a short description into a complete virtual network, ready to use.</p>
+            <p class="ask"><span>Ask me about</span> the network cables that kept swapping places.</p>
+            <ul class="stack"><li>Bash</li><li>VMware</li><li>Docker</li></ul>
+            <a class="talk" href="#contact">Let's talk about it →</a>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="sub-title">More work</h3>
+      <div class="projects-grid small">
+        <article class="project">
+          <button class="tile" aria-haspopup="dialog">
+            <span class="tile-art"><svg class="art-svg" viewBox="0 0 400 300" role="img" aria-label="Abstract sketch: a window showing an agent and the steps it is taking, with an approval check"><circle class="gd spin" cx="170" cy="150" r="70"/> <rect class="ln" x="80" y="58" width="240" height="170" rx="12"/> <line class="ln" x1="80" y1="82" x2="320" y2="82"/> <circle class="dt" cx="95" cy="70" r="2.5"/><circle class="dt" cx="105" cy="70" r="2.5"/><circle class="dt" cx="115" cy="70" r="2.5"/> <circle class="ln" cx="160" cy="155" r="34"/><circle class="af" cx="160" cy="155" r="6"/> <line class="gd" x1="196" y1="125" x2="248" y2="118"/><line class="gd" x1="196" y1="155" x2="248" y2="155"/><line class="gd" x1="196" y1="185" x2="248" y2="192"/> <rect class="ln" x="250" y="111" width="48" height="14" rx="7"/><rect class="ln" x="250" y="148" width="48" height="14" rx="7"/> <rect class="ac" x="250" y="185" width="48" height="14" rx="7"/><polyline class="ac" points="266,192 272,197 283,187"/> <text class="nt" x="120" y="265" transform="rotate(-3 120 265)">show the work</text></svg></span>
+            <span class="tile-meta">
+              <span class="tile-num">05</span><span class="tile-title">Real-time AI agent client</span>
+              <span class="tile-tag">Showing people what an AI agent is doing, live.</span>
+              <span class="tile-foot"><span class="badge">Significant client-side contributor</span><span class="tile-open">Open ↗</span></span>
+            </span>
+          </button>
+          <div class="project-body" hidden>
+            <div class="case-head"><span class="case-num">05</span><h3>Real-time AI agent client</h3><span class="badge">Significant client-side contributor</span></div>
+            <p class="case-summary">A desktop app for working with an AI agent in real time, where you can see what it is doing while it works.</p>
+            <p class="ask"><span>Ask me about</span> why transparency is what makes people trust an agent.</p>
+            <ul class="stack"><li>React</li><li>Tauri</li><li>TypeScript</li></ul>
+            <a class="talk" href="#contact">Let's talk about it →</a>
+          </div>
+        </article>
+        <article class="project">
+          <button class="tile" aria-haspopup="dialog">
+            <span class="tile-art"><svg class="art-svg" viewBox="0 0 400 300" role="img" aria-label="Abstract sketch: a tree of jobs that plans, searches and converges into a report"><circle class="gd spin" cx="200" cy="150" r="118"/> <line class="ln" x1="200" y1="68" x2="124" y2="126"/><line class="ln" x1="200" y1="68" x2="200" y2="120"/><line class="ln" x1="200" y1="68" x2="276" y2="126"/> <circle class="ln" cx="200" cy="58" r="10"/> <circle class="ln" cx="120" cy="132" r="8"/><circle class="ac" cx="200" cy="132" r="12"/><circle class="af" cx="200" cy="132" r="4"/><circle class="ln" cx="280" cy="132" r="8"/> <line class="ln" x1="116" y1="139" x2="92" y2="194"/><line class="ln" x1="124" y1="139" x2="148" y2="194"/> <line class="ln" x1="276" y1="139" x2="252" y2="194"/><line class="ln" x1="284" y1="139" x2="308" y2="194"/> <circle class="ln" cx="90" cy="200" r="6"/><circle class="ln" cx="150" cy="200" r="6"/><circle class="ln" cx="250" cy="200" r="6"/><circle class="ln" cx="310" cy="200" r="6"/> <path class="gd" d="M90 206 C 100 240, 180 245, 196 252"/><path class="gd" d="M150 206 C 160 235, 190 245, 198 250"/> <path class="gd" d="M250 206 C 240 235, 210 245, 202 250"/><path class="gd" d="M310 206 C 300 240, 220 245, 204 252"/> <rect class="ln" x="188" y="250" width="24" height="18" rx="2"/> <text class="nt" x="222" y="104">think</text></svg></span>
+            <span class="tile-meta">
+              <span class="tile-num">06</span><span class="tile-title">Multi-step LLM pipeline</span>
+              <span class="tile-tag">LLM steps that plan, search and report.</span>
+              <span class="tile-foot"><span class="badge">Team project · one of the developers</span><span class="tile-open">Open ↗</span></span>
+            </span>
+          </button>
+          <div class="project-body" hidden>
+            <div class="case-head"><span class="case-num">06</span><h3>Multi-step LLM pipeline</h3><span class="badge">Team project · one of the developers</span></div>
+            <p class="case-summary">Part of the team behind a pipeline where AI steps plan the research, carry it out, and write up what they found.</p>
+            <p class="ask"><span>Ask me about</span> how to let an AI make requests without handing it the keys.</p>
+            <ul class="stack"><li>NestJS</li><li>Python</li><li>Redis</li></ul>
+            <a class="talk" href="#contact">Let's talk about it →</a>
+          </div>
+        </article>
+        <article class="project">
+          <button class="tile" aria-haspopup="dialog">
+            <span class="tile-art"><svg class="art-svg" viewBox="0 0 400 300" role="img" aria-label="Abstract sketch: a state machine from pending to running to done or failed"><circle class="gd" cx="200" cy="150" r="125"/> <circle class="ln" cx="80" cy="150" r="22"/><circle class="ln" cx="200" cy="150" r="22"/> <circle class="ac dash spin" cx="200" cy="150" r="32"/> <circle class="ln" cx="320" cy="92" r="22"/><circle class="ln" cx="320" cy="208" r="22"/> <circle class="af" cx="320" cy="92" r="5"/> <line class="ln" x1="104" y1="150" x2="164" y2="150"/><polyline class="ln" points="156,144 164,150 156,156"/> <line class="ln" x1="230" y1="135" x2="296" y2="102"/><polyline class="ln" points="287,99 296,102 292,110"/> <line class="ln" x1="230" y1="165" x2="296" y2="198"/><polyline class="ln" points="292,190 296,198 287,201"/> <text class="nt" x="52" y="196">pending</text><text class="nt" x="172" y="208">running</text> <text class="nt" x="300" y="56">done</text><text class="nt" x="302" y="254">failed</text> <text class="nt" x="58" y="80" transform="rotate(-4 58 80)">claimed once</text></svg></span>
+            <span class="tile-meta">
+              <span class="tile-num">07</span><span class="tile-title">Job-management API</span>
+              <span class="tile-tag">Long-running jobs, claimed once, never duplicated.</span>
+              <span class="tile-foot"><span class="badge">Author</span><span class="tile-open">Open ↗</span></span>
+            </span>
+          </button>
+          <div class="project-body" hidden>
+            <div class="case-head"><span class="case-num">07</span><h3>Job-management API</h3><span class="badge">Author</span></div>
+            <p class="case-summary">An API for jobs that take minutes, not milliseconds. You ask, you get a ticket, and the work happens in the background.</p>
+            <p class="ask"><span>Ask me about</span> what stops the same job from running twice.</p>
+            <ul class="stack"><li>Python</li><li>FastAPI</li><li>PostgreSQL</li></ul>
+            <a class="talk" href="#contact">Let's talk about it →</a>
+          </div>
+        </article>
+        <article class="project">
+          <button class="tile" aria-haspopup="dialog">
+            <span class="tile-art"><svg class="art-svg" viewBox="0 0 400 300" role="img" aria-label="Abstract sketch: a loop of observe, plan, act and confirm"><circle class="gd spin" cx="200" cy="150" r="112"/> <path class="ln" d="M213.9 71.2 A80 80 0 0 1 278.8 136.1"/> <path class="ln" d="M278.8 163.9 A80 80 0 0 1 213.9 228.8"/> <path class="ac" d="M186.1 228.8 A80 80 0 0 1 121.2 163.9"/> <path class="ln" d="M121.2 136.1 A80 80 0 0 1 186.1 71.2"/> <polyline class="ln" points="272,126 279,136 285,125"/> <line class="gd" x1="200" y1="125" x2="200" y2="175"/><line class="gd" x1="175" y1="150" x2="225" y2="150"/> <circle class="dt" cx="200" cy="150" r="3"/> <text class="nt" x="270" y="78">observe</text><text class="nt" x="282" y="230">plan</text> <text class="nt" x="96" y="240">act</text><text class="nt" x="58" y="82">confirm</text></svg></span>
+            <span class="tile-meta">
+              <span class="tile-num">08</span><span class="tile-title">Agent skills</span>
+              <span class="tile-tag">Teaching an AI agent how to work with tools.</span>
+              <span class="tile-foot"><span class="badge">Authored several skills</span><span class="tile-open">Open ↗</span></span>
+            </span>
+          </button>
+          <div class="project-body" hidden>
+            <div class="case-head"><span class="case-num">08</span><h3>Agent skills</h3><span class="badge">Authored several skills</span></div>
+            <p class="case-summary">Instructions and tools that teach an AI agent how to get real work done.</p>
+            <p class="ask"><span>Ask me about</span> how an agent decides which tool fits each task.</p>
+            <ul class="stack"><li>Python</li><li>Playwright</li></ul>
+            <a class="talk" href="#contact">Let's talk about it →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= PERSONAL AI ================= -->
+    <section id="ai" class="section container">
+      <h2 class="section-title">Personal AI projects</h2>
+      <p class="section-intro">Self-directed, outside my job.</p>
+      <div class="projects-grid wide">
+        <article class="project ai">
+          <button class="tile" aria-haspopup="dialog">
+            <span class="tile-art"><svg class="art-svg" viewBox="0 0 400 300" role="img" aria-label="Abstract sketch: feature maps shrinking layer by layer into four classes"><circle class="gd spin" cx="200" cy="150" r="120"/> <rect class="ln" x="48" y="82" width="104" height="104"/><rect class="ln" x="56" y="74" width="104" height="104"/><rect class="ln" x="64" y="66" width="104" height="104"/> <rect class="ln" x="190" y="104" width="64" height="64"/><rect class="ln" x="197" y="97" width="64" height="64"/> <rect class="ln" x="280" y="122" width="34" height="34"/> <line class="gd" x1="168" y1="66" x2="197" y2="97"/><line class="gd" x1="168" y1="170" x2="197" y2="161"/> <line class="gd" x1="261" y1="97" x2="280" y2="122"/><line class="gd" x1="261" y1="161" x2="280" y2="156"/> <line class="gd" x1="314" y1="139" x2="344" y2="100"/><line class="gd" x1="314" y1="139" x2="344" y2="125"/> <line class="gd" x1="314" y1="139" x2="344" y2="150"/><line class="gd" x1="314" y1="139" x2="344" y2="175"/> <circle class="ln" cx="350" cy="100" r="6"/><circle class="af" cx="350" cy="125" r="6"/><circle class="ln" cx="350" cy="150" r="6"/><circle class="ln" cx="350" cy="175" r="6"/> <text class="nt accent" x="270" y="240" transform="rotate(-4 270 240)">98.5%</text></svg></span>
+            <span class="tile-meta">
+              <span class="tile-title">Furniture image classifier</span>
+              <span class="tile-tag">A CNN from scratch, 98.5% best test accuracy.</span>
+              <span class="tile-foot"><span class="badge">CNN from scratch · PyTorch</span><span class="tile-open">Open ↗</span></span>
+            </span>
+          </button>
+          <div class="project-body" hidden>
+            <div class="case-head"><h3>Furniture image classifier</h3><span class="badge">CNN from scratch · PyTorch</span></div>
+            <div class="metric"><strong>98.5%</strong><span>best test accuracy</span></div>
+            <p class="case-summary">A neural network I built from scratch to tell beds, chairs, sofas and tables apart, published openly with a model card. Trained on synthetic images, so real photos may score lower.</p>
+            <p class="ask"><span>Ask me about</span> how far a network gets with no pretrained help.</p>
+            <ul class="stack"><li>PyTorch</li><li>Hugging Face</li></ul>
+            <a class="talk" href="https://huggingface.co/ArtInSoul/furniture-classifier" target="_blank" rel="noopener">See it on Hugging Face ↗</a>
+          </div>
+        </article>
+        <article class="project ai">
+          <button class="tile" aria-haspopup="dialog">
+            <span class="tile-art"><svg class="art-svg" viewBox="0 0 400 300" role="img" aria-label="Abstract sketch: sketched shapes framed by detection boxes"><line class="gd" x1="200" y1="30" x2="200" y2="270"/><line class="gd" x1="40" y1="150" x2="360" y2="150"/> <circle class="gd spin" cx="200" cy="150" r="110"/> <circle class="ln" cx="135" cy="135" r="38"/> <path class="ln" d="M232 205 L 272 120 L 312 205 Z"/> <rect class="ac" x="90" y="90" width="90" height="90"/> <rect class="af" x="90" y="78" width="34" height="12"/> <rect class="ln dash" x="222" y="110" width="100" height="105"/> <text class="nt" x="140" y="258" transform="rotate(-3 140 258)">find it, frame it</text></svg></span>
+            <span class="tile-meta">
+              <span class="tile-title">Custom object detection</span>
+              <span class="tile-tag">Fine-tuned detection with hands-on data prep.</span>
+              <span class="tile-foot"><span class="badge">YOLOv5 fine-tuning</span><span class="tile-open">Open ↗</span></span>
+            </span>
+          </button>
+          <div class="project-body" hidden>
+            <div class="case-head"><h3>Custom object detection</h3><span class="badge">YOLOv5 fine-tuning</span></div>
+            <p class="case-summary">Fine-tuned YOLOv5 for an object-detection task, including hands-on dataset preparation and augmentation. A private project.</p>
+            
+            <ul class="stack"><li>PyTorch</li><li>YOLOv5</li></ul>
+            <a class="talk" href="#contact">Let's talk about it →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section id="skills" class="section container">
+      <h2 class="section-title">Skills</h2>
+      <div class="skill-groups">
+        <div class="skill-group primary">
+          <h3>Core</h3>
+          <p class="muted">Where I have real professional depth</p>
+          <ul class="skills">
+            <li>TypeScript</li><li>NestJS</li><li>Node.js</li><li>REST API design</li>
+            <li>OpenAPI as contract</li><li>PostgreSQL</li><li>Prisma</li><li>React</li>
+            <li>React Flow</li><li>Zod</li><li>RBAC / CASL</li><li>Docker</li>
+            <li>Git / GitHub</li><li>CI/CD</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Also used at work</h3>
+          <ul class="skills">
+            <li>Python</li><li>FastAPI</li><li>Elasticsearch</li><li>Redis / BullMQ</li>
+            <li>AWS (EC2, S3, IAM)</li><li>MongoDB</li><li>C# / .NET</li><li>Tauri</li>
+            <li>SSE</li><li>Bash</li><li>Linux</li><li>Auth0</li><li>WorkOS</li>
+            <li>VMware ESXi</li><li>Rundeck</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Machine learning</h3>
+          <p class="muted">Personal projects</p>
+          <ul class="skills">
+            <li>PyTorch</li><li>CNNs</li><li>YOLOv5</li><li>Hugging Face</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ART ================= -->
+    <section id="art" class="section container">
+      <h2 class="section-title">On paper</h2>
+      <p class="section-intro">
+        Drawing and painting came first. Click any piece to see it larger.
+      </p>
+      <div class="gallery compact">
+        <button class="art"><img loading="lazy" src="art/art-06.jpg" alt="Painting of a face surrounded by autumn leaves and flowers" /></button>
+        <button class="art"><img loading="lazy" src="art/art-01.jpg" alt="Pencil portrait of a woman with long, loose hair" /></button>
+        <button class="art"><img loading="lazy" src="art/art-05.jpg" alt="Painting of a woman with orange curls and a pink top" /></button>
+        <button class="art"><img loading="lazy" src="art/art-13.jpg" alt="Pencil drawing of a lion" /></button>
+        <button class="art"><img loading="lazy" src="art/art-09.jpg" alt="Drawing of a woman in purple sunglasses reflecting a mountain sunset" /></button>
+        <button class="art"><img loading="lazy" src="art/art-07.jpg" alt="Pencil portrait of a woman with sleek long hair" /></button>
+        <button class="art"><img loading="lazy" src="art/art-08.jpg" alt="Painting of a misty green pine forest" /></button>
+        <button class="art"><img loading="lazy" src="art/art-03.jpg" alt="Pencil drawing of a horse kicking up its hind legs" /></button>
+        <button class="art"><img loading="lazy" src="art/art-02.jpg" alt="Pencil portrait of a young woman with a short bob" /></button>
+        <button class="art"><img loading="lazy" src="art/art-12.jpg" alt="Pencil drawing of a face with a butterfly" /></button>
+        <button class="art"><img loading="lazy" src="art/art-04.jpg" alt="Sketch of a woman looking over her shoulder" /></button>
+        <button class="art"><img loading="lazy" src="art/art-10.jpg" alt="Pencil drawing of a girl with glasses" /></button>
+        <button class="art"><img loading="lazy" src="art/art-11.jpg" alt="Pencil portrait of a woman with short hair" /></button>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="section container contact">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-intro">Open to full-stack, backend and AI-integration roles.</p>
+      <div class="contact-buttons">
+        <a class="contact-btn" href="mailto:atarahadad2004@gmail.com">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          atarahadad2004@gmail.com
+        </a>
+        <a class="contact-btn" href="tel:+972548476021">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.5h2.6l1.5 4-2 1.4a11 11 0 0 0 6.4 6.4l1.4-2 4 1.5v2.6a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          054-847-6021
+        </a>
+        <a class="contact-btn" href="https://www.linkedin.com/in/atara24" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+          LinkedIn
+        </a>
+        <a class="contact-btn" href="https://huggingface.co/ArtInSoul" target="_blank" rel="noopener">
+          <span class="emoji-icon" aria-hidden="true">🤗</span>
+          Hugging Face
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Atara Hadad</p>
+  </footer>
+
+  <dialog class="project-modal" id="projectModal" aria-label="Project details">
+    <button class="modal-close" aria-label="Close">✕</button>
+    <div class="modal-art"></div>
+    <div class="modal-body case"></div>
+  </dialog>
+
+  <dialog class="lightbox" id="lightbox">
+    <img alt="" />
+    <button class="lightbox-close" aria-label="Close">✕</button>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
