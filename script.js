@@ -93,7 +93,7 @@ render();
 
 // ===== Fade-up for content blocks =====
 const revealTargets = document.querySelectorAll(
-  ".section-title, .section-intro, .about-grid, .project, .skill-group, .contact-buttons, .art"
+  ".section-title, .section-intro, .about-grid, .project, .skill-group, .contact-buttons"
 );
 revealTargets.forEach((el) => el.classList.add("reveal"));
 const observer = new IntersectionObserver(
@@ -127,16 +127,39 @@ modalBody.addEventListener("click", (e) => {
   if (e.target.closest('a[href^="#"]')) modal.close();
 });
 
-// ===== Lightbox for the art gallery =====
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = lightbox.querySelector("img");
-document.querySelectorAll(".art").forEach((btn) =>
-  btn.addEventListener("click", () => {
-    const img = btn.querySelector("img");
-    lightboxImg.src = img.src;
-    lightboxImg.alt = img.alt;
-    lightbox.showModal();
-  })
-);
-lightbox.querySelector(".lightbox-close").addEventListener("click", () => lightbox.close());
-lightbox.addEventListener("click", (e) => { if (e.target === lightbox) lightbox.close(); });
+// ===== Project rails: sideways scrolling with arrow buttons =====
+document.querySelectorAll(".projects-grid").forEach((grid) => {
+  const rail = document.createElement("div");
+  rail.className = "rail";
+  grid.before(rail);
+  rail.append(grid);
+
+  const makeBtn = (dir, label, text) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = `rail-btn ${dir}`;
+    b.setAttribute("aria-label", label);
+    b.textContent = text;
+    b.addEventListener("click", () =>
+      grid.scrollBy({ left: (dir === "prev" ? -1 : 1) * grid.clientWidth * 0.8 })
+    );
+    rail.append(b);
+    return b;
+  };
+  const prev = makeBtn("prev", "Previous projects", "←");
+  const next = makeBtn("next", "More projects", "→");
+
+  const update = () => {
+    // Center the arrows on the sketches
+    const art = grid.querySelector(".tile-art");
+    if (art) rail.style.setProperty("--art-h", `${art.offsetHeight / 2}px`);
+    prev.hidden = grid.scrollLeft < 4;
+    next.hidden = grid.scrollLeft + grid.clientWidth >= grid.scrollWidth - 4;
+    rail.classList.toggle("can-prev", !prev.hidden);
+    rail.classList.toggle("can-next", !next.hidden);
+  };
+  grid.addEventListener("scroll", update, { passive: true });
+  addEventListener("resize", update);
+  addEventListener("load", update);
+  update();
+});

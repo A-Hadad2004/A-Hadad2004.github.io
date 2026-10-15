@@ -547,3 +547,53 @@ body { overflow-x: clip; }
   .beat-3 .btn { padding: 10px 18px; }
   .contact-btn { padding: 11px 12px; font-size: .9rem; gap: 8px; }
 }
+
+/* ===== Projects scroll sideways, like a gallery ===== */
+.rail { position: relative; }
+.projects-grid, .projects-grid.small, .projects-grid.wide {
+  display: flex; gap: 18px; overflow-x: auto; overflow-y: hidden;
+  scroll-snap-type: x mandatory; scroll-behavior: smooth; overscroll-behavior-x: contain;
+  padding: 8px 2px 22px; margin: -8px -2px -14px; scrollbar-width: none;
+}
+.projects-grid::-webkit-scrollbar { display: none; }
+.projects-grid > .project { flex: 0 0 var(--card); scroll-snap-align: start; }
+.projects-grid.small { --card: 270px; }
+.projects-grid.wide { --card: min(500px, 100%); }
+.small .tile-tag { display: block; }
+
+.rail-btn {
+  position: absolute; top: calc(8px + var(--art-h, 100px) - 22px); z-index: 2;
+  width: 44px; height: 44px; border-radius: 50%; cursor: pointer;
+  border: 1px solid var(--border); background: var(--surface); color: var(--primary);
+  font-size: 1.15rem; box-shadow: 0 8px 22px rgba(60, 40, 20, .16);
+  transition: transform .25s cubic-bezier(.2,.8,.2,1), border-color .25s;
+}
+.rail-btn:hover { transform: scale(1.08); border-color: var(--primary); }
+.rail-btn.prev { left: -20px; }
+.rail-btn.next { right: -20px; }
+.rail-btn[hidden] { display: none; }
+
+@media (max-width: 1120px) {
+  .rail-btn.prev { left: 6px; }
+  .rail-btn.next { right: 6px; }
+}
+@media (max-width: 640px) {
+  .projects-grid.small { --card: 72%; gap: 12px; }
+  .projects-grid.wide { --card: 86%; gap: 12px; }
+  .small .tile-tag { display: block; }
+  .small .tile-meta { padding: 14px 16px 16px; }
+  .small .tile-title { font-size: 1.05rem; }
+  .rail-btn { width: 38px; height: 38px; font-size: 1rem; }
+}
+@media (hover: none) { .rail-btn:hover { transform: none; } }
+@media (prefers-reduced-motion: reduce) { .projects-grid { scroll-behavior: auto; } }
+/* Soft fade on the side that has more to scroll */
+.rail.can-next .projects-grid { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 70px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 70px), transparent); }
+.rail.can-prev .projects-grid { -webkit-mask-image: linear-gradient(to right, transparent, #000 70px); mask-image: linear-gradient(to right, transparent, #000 70px); }
+.rail.can-prev.can-next .projects-grid { -webkit-mask-image: linear-gradient(to right, transparent, #000 70px, #000 calc(100% - 70px), transparent); mask-image: linear-gradient(to right, transparent, #000 70px, #000 calc(100% - 70px), transparent); }
+@media (max-width: 640px) {
+  /* The rail runs to the screen edges; swipe instead of arrows */
+  .projects-grid, .projects-grid.small, .projects-grid.wide { margin-inline: -16px; padding-inline: 16px; scroll-padding-inline: 16px; }
+  .rail.can-prev .projects-grid, .rail.can-next .projects-grid { -webkit-mask-image: none; mask-image: none; }
+}
+@media (hover: none) and (pointer: coarse) { .rail-btn { display: none; } }
