@@ -522,3 +522,28 @@ body { overflow-x: clip; }
   .contact-btn { flex: 1 1 calc(50% - 6px); justify-content: center; padding: 12px 14px; }
   .contact-btn:first-child { flex-basis: 100%; }
 }
+
+/* ===== Phones: narrow screens and touch ===== */
+/* svh ignores the mobile address bar, so the intro does not jump while scrolling */
+.stage { height: 100svh; }
+@media (hover: none) {
+  .tile:hover, .contact-btn:hover, .art:hover, .btn:hover { transform: none; box-shadow: none; }
+  .art:hover { box-shadow: 0 2px 6px rgba(0,0,0,.06), 0 10px 26px rgba(60,40,20,.10); }
+}
+@media (max-width: 640px) {
+  .section { padding-block: 44px; }
+  .section-title { font-size: 1.7rem; }
+  .beat-meta { font-size: .88rem; }
+  .beat-meta span { white-space: nowrap; }
+  .wide .tile-art { aspect-ratio: auto; height: 190px; }
+  .lightbox-close { top: 8px; right: 8px; }
+}
+@media (max-width: 420px) {
+  .projects-grid.small { gap: 10px; }
+  .small .tile-meta { padding: 10px 11px 12px; }
+  .small .tile-title { font-size: .95rem; hyphens: auto; }
+  .tile .badge { font-size: .7rem; padding: 2px 8px; }
+  .hero-buttons { gap: 10px; }
+  .beat-3 .btn { padding: 10px 18px; }
+  .contact-btn { padding: 11px 12px; font-size: .9rem; gap: 8px; }
+}
